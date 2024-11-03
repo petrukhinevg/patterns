@@ -7,7 +7,7 @@ public class Subscriber implements Observer {
     String name;
 
     public Subscriber(String name) {
-        this.name = ColorUtil.blueColor + name + ColorUtil.resetColor;
+        this.name = name;
     }
 
     public String getName() {
@@ -18,9 +18,9 @@ public class Subscriber implements Observer {
     public void handleEvent(long temp, String windSpeed) {
         String message = buildEventMessage(temp, windSpeed);
         System.out.println(
-                ColorUtil.blueColor + "-".repeat(ColorUtil.cleanedMessage(message).length())
+                ColorUtil.blueColor("-".repeat(ColorUtil.cleanedMessage(message).length()))
                 +"\n" + message + "\n"
-                +ColorUtil.blueColor + "-".repeat(ColorUtil.cleanedMessage(message).length()));
+                +ColorUtil.blueColor("-".repeat(ColorUtil.cleanedMessage(message).length())));
     }
 
     private String buildEventMessage(long temp, String windSpeed) {

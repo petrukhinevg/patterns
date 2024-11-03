@@ -9,7 +9,7 @@ public class JavaTeamLead extends DeveloperDecorator{
     }
 
     public String sendWeedReport() {
-        return "Smoke some "+ ColorUtil.greenColor + "weed " + ColorUtil.resetColor + "and send report... ";
+        return "Smoke some "+ ColorUtil.greenColor("weed")+ " and send report... ";
     }
 
     @Override
